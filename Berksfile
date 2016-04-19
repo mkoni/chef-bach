@@ -63,3 +63,7 @@ cookbook 'kafka',
 # pdns forked, pending acceptance of a PR.
 cookbook 'pdns',
   git: 'https://github.com/http-418/pdns'
+
+
+cookbook 'graphite_handler',
+  git: 'https://github.com/mkoni/chef-graphite_handler.git'

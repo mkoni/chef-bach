@@ -25,6 +25,9 @@ DEPENDENCIES
   cobblerd
     git: https://github.com/http-418/cobbler-cookbook
     revision: 7579830836fd9474524066114246d65696661616
+  graphite_handler
+    git: https://github.com/mkoni/chef-graphite_handler.git
+    revision: e48c2cba3194efd7800310b34cecae16e0853e2b
   hannibal
     path: cookbooks/hannibal
   java
