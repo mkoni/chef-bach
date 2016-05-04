@@ -1,0 +1,27 @@
+# -*- mode: ruby -*-
+#
+# This file was written for chef-provisioning-vagrant 0.9.0.  Newer
+# versions abandon raw Vagrant/Virtualbox configurations in favor of
+# ruby hashes.
+#
+# The bach_cluster demos are stuck on 0.9.0 until someone figures out
+# how to configure advanced features via the ruby hash.  (Using the 
+# existing raw configuration works for the first converge, but subsequent
+# converges do not preserve the VM configuration.)
+#
+
+
+config.vm.provider :metal do |m, override|
+
+  override.ssh.username = "<%= @ssh_username %>"
+
+  m.ipmi_username = "<%= @ipmi_username %>"
+  m.ipmi_password = "<%= @ipmi_password %>"
+  m.ipmi_address = "<%= @ilo_ip %>"
+
+  override.ssh.insert_key = true
+  override.ssh.private_key_path = "<%= @private_key %>"
+
+  m.ssh_hosts = {:host => "<%= @mgmt_ip %>", :port => 22, :username => "<%= @ssh_username %>"}
+
+end

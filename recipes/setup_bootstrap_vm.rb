@@ -41,7 +41,7 @@ bootstrap_vm_configuration = <<-EOM
      vb.gui = false
      vb.name = "#{bootstrap_vm_name}"
      vb.cpus = 4
-     vb.customize ["modifyvm", :id, "--memory", "3072"]
+     vb.customize ["modifyvm", :id, "--memory", "8072"]
      vb.customize ["modifyvm", :id, "--nictype2", "82543GC"]
      vb.customize ["modifyvm", :id, "--largepages", "on"]
      vb.customize ["modifyvm", :id, "--nestedpaging", "on"]

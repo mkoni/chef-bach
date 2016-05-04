@@ -2,7 +2,7 @@
 .bundle/
 .kitchen/
 vendor/
-
+.*.swp
 # chef-zero stuff
 .chef
 clients/

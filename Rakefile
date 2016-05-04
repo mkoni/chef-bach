@@ -104,6 +104,11 @@ namespace :setup do
     chef_zero 'setup_hadoop_demo_pxe'
   end
 
+  desc 'Provision a Hadoop demo environment using PXE Metal installation'
+  task :hadoop_demo_pxe_metal do
+    chef_zero 'setup_hadoop_demo_pxe_metal'
+  end
+
   desc 'Provision a Kafka demo environment using Vagrant images'
   task :kafka_demo_vagrant do
     chef_zero 'setup_kafka_demo_vagrant'
